@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../components/header/header";
 import { useState } from "react";
 import axios from "../config";
-
+// 
 const Admin = () => {
   // post
   const [name, setName] = useState("");
