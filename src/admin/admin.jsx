@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Header from "../components/header/header";
 import { useState } from "react";
 import axios from "../config";
-// 
+//
 const Admin = () => {
   // post
   const [name, setName] = useState("");
@@ -78,11 +78,16 @@ const Admin = () => {
   }, []);
 
   const handleSubmit2 = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     const formData = new FormData();
     formData.append("file", event.target.files[0]);
-    apiRoot.post(`/v1/upload/file`, formData, { headers: { "Authorization": `${token}` } }).then((res) => setImage(res?.data)).catch(() => error())
-  }
+    apiRoot
+      .post(`/v1/upload/file`, formData, {
+        headers: { Authorization: `${token}` },
+      })
+      .then((res) => setImage(res?.data))
+      .catch(() => error());
+  };
 
   return (
     <div>
@@ -116,14 +121,14 @@ const Admin = () => {
               type="text"
               placeholder="Doktorning tel raqami"
             />
-              <input
-                type="file"
-                name="file"
-                required
-                accept="image/*"
-                onChange={handleSubmit2}
-                id="file"
-              />
+            <input
+              type="file"
+              name="file"
+              required
+              accept="image/*"
+              onChange={handleSubmit2}
+              id="file"
+            />
             {/* <input
               type="text"
               placeholder="Doktorning rasm silkasi"
