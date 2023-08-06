@@ -26,7 +26,7 @@ const Aboutwe = () => {
           </p>
         </div>
         <div className="aboutwe_img">
-          <img src={aboutwe?.s_image_url} alt="hospital" />
+          <img src={"http://" + aboutwe?.s_image_url} alt="hospital" style={{width: "540px", height: "520px", top: "969px", left: "640px"}}/>
         </div>
       </div>
     </div>

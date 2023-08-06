@@ -31,7 +31,7 @@ const Workers = () => {
               <h5>{elem?.phone_number}</h5>
             </div>
             <div className="workers_img">
-              <img src={elem?.image_url} alt="workers1" />
+              <img src={"http://" + elem?.image_url} alt="workers1" style={{width: "365px", height: "485px", left:"715px"}} />
             </div>
           </div>
         ))}

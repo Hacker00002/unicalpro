@@ -22,14 +22,14 @@ const About = () => {
             <h1>{about?.title}</h1>
             <p>{about?.paragraph}</p>
             <div>
-              <a href="#">{about?.phone_number}</a>
+              <a href={"tel:" + about.phone_number}>{about?.phone_number}</a>
             </div>
           </div>
         </div>
       </div>
       <div>
         <img
-          src={doctors}
+          src={"http://" + about?.f_image_url}
           style={{ width: "50vw", height: "100vh" }}
           alt="doctoes"
         />

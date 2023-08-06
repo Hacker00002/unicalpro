@@ -6,7 +6,7 @@ const Location = () => {
       <div className="contact_group">
         <div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d96678.81044000608!2d72.23724489414295!3d40.779335044657465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1690896042389!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1510.2664740210755!2d72.321468!3d40.794281!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bc9506424eccbf%3A0xd8d269fb57a92b8c!2sImpuls%20klinik!5e0!3m2!1sru!2sus!4v1691304960006!5m2!1sru!2sus"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"

@@ -16,9 +16,20 @@
 }
 
 .container__hero a {
-  color: #00a962;
-  font-size: 25px;
+  max-width: 150px;
+  height: 42px;
+  top: 565px;
+  left: 100px;
+  border-radius: 21px;
+  color: #fff;
+  font-size: 20px;
+  background-color: rgba(0, 169, 99, 0.792);
+  padding: 10px;
 }
+
+.container__hero a:hover {
+  background-color: #00a962;
+} 
 
 .container__hero {
   width: 100%;

@@ -9,7 +9,7 @@ const Admin = () => {
   const [job, setJob] = useState("");
   const [about, setAbout] = useState("");
   const [phone, setPhone] = useState("");
-  const [image, setImage] = useState("");
+  const [imgUpload, setImage] = useState("");
   // update
   const [about1, setAbout1] = useState("");
   const [phone1, setPhone1] = useState("");
@@ -25,7 +25,7 @@ const Admin = () => {
       type: job,
       about: about,
       phone_number: phone,
-      image_url: image,
+      image_url: imgUpload,
     };
     axios
       .post("v1/doctor", data)
@@ -78,16 +78,11 @@ const Admin = () => {
   }, []);
 
   const handleSubmit2 = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     const formData = new FormData();
     formData.append("file", event.target.files[0]);
-    apiRoot
-      .post(`/v1/upload/file`, formData, {
-        headers: { Authorization: `${token}` },
-      })
-      .then((res) => setImgUpload(res?.data))
-      .catch(() => error());
-  };
+    apiRoot.post(`/v1/upload/file`, formData, { headers: { "Authorization": `${token}` } }).then((res) => setImage(res?.data)).catch(() => error())
+  }
 
   return (
     <div>
@@ -121,17 +116,19 @@ const Admin = () => {
               type="text"
               placeholder="Doktorning tel raqami"
             />
-            <input
-              onChange={handleSubmit2}
-              type="file"
-              placeholder="Doktorning rasm silkasi"
-            />
-            <input
-              required
+              <input
+                type="file"
+                name="file"
+                required
+                accept="image/*"
+                onChange={handleSubmit2}
+                id="file"
+              />
+            {/* <input
               type="text"
               placeholder="Doktorning rasm silkasi"
               onChange={(e) => setImage(e.target.value)}
-            />
+            /> */}
             <button type="submit">Qo'shish</button>
           </form>
         </div>
@@ -195,7 +192,7 @@ const Admin = () => {
                 <h5>{elem?.phone_number}</h5>
               </div>
               <div className="workers_img">
-                <img src={elem?.image_url} alt="workers1" />
+                <img src={"http://" + elem?.image_url} alt="workers1" />
               </div>
             </div>
           ))}
