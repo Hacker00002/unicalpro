@@ -82,7 +82,7 @@ const Admin = () => {
     const formData = new FormData();
     formData.append("file", event.target.files[0]);
     apiRoot
-      .post(`/v1/file-upload`, formData, {
+      .post(`/v1/upload/file`, formData, {
         headers: { Authorization: `${token}` },
       })
       .then((res) => setImgUpload(res?.data))
@@ -122,7 +122,7 @@ const Admin = () => {
               placeholder="Doktorning tel raqami"
             />
             <input
-              onChange={(e) => setImages(e.target.value)}
+              onChange={handleSubmit2}
               type="file"
               placeholder="Doktorning rasm silkasi"
             />
