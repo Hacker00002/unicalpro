@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route index element={<Component />} />
           <Route path="login-admin" element={<Adminlogin />} />
-          {/* <Route path="dashboard-admin" element={<Admin />} /> */}
+          <Route path="dashboard-admin" element={<Admin />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -28,7 +28,7 @@ const Workers = () => {
                 <div className="line"></div>
                 {elem?.about}
               </p>
-              <h5>{elem?.phone_number}</h5>
+              <a href={"tel:" + elem.phone_number}>{elem?.phone_number}</a>
             </div>
             <div className="workers_img">
               <img src={"http://" + elem?.image_url} alt="workers1" style={{width: "365px", height: "485px", left:"715px"}} />
