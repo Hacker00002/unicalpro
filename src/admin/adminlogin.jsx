@@ -4,7 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 
 const apiRoot = axios.create({
-  baseURL: `http://3.71.77.21:3000/`,
+  baseURL: `https://artmedical.uz/`,
 });
 
 const Adminlogin = () => {

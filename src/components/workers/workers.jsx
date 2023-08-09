@@ -6,7 +6,7 @@ const Workers = () => {
   const [worker, setWorker] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
-      const datas = await fetch("http://3.71.77.21:3000/doctors").then((elem) =>
+      const datas = await fetch("https://artmedical.uz/v1/doctors").then((elem) =>
         elem.json()
       );
       setWorker(datas?.doctors);

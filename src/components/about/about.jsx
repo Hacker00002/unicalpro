@@ -6,7 +6,7 @@ const About = () => {
   const [about, setAbout] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
-      const datas = await fetch("http://3.71.77.21:3000/aboutus").then((data) =>
+      const datas = await fetch("https://artmedical.uz/v1/aboutus").then((data) =>
         data.json()
       );
       setAbout(datas);

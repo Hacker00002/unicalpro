@@ -1,7 +1,7 @@
 import axios from "axios";
 const workerToken = localStorage.getItem("Authorization");
 
-axios.defaults.baseURL = `http://3.71.77.21:3000/`;
+axios.defaults.baseURL = `https://artmedical.uz/`;
 
 axios.interceptors.request.use((config) => {
   if (workerToken) {
