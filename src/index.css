@@ -29,7 +29,7 @@
 
 .container__hero a:hover {
   background-color: #00a962;
-} 
+}
 
 .container__hero {
   width: 100%;
@@ -504,6 +504,9 @@ footer {
   }
   .aboutwe_img img {
     width: 100%;
+  }
+  .workers_text a {
+    text-align: center !important;
   }
 }
 
