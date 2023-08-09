@@ -6,8 +6,8 @@ const Workers = () => {
   const [worker, setWorker] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
-      const datas = await fetch("https://artmedical.uz/v1/doctors").then((elem) =>
-        elem.json()
+      const datas = await fetch("https://artmedical.uz/v1/doctors").then(
+        (elem) => elem.json()
       );
       setWorker(datas?.doctors);
     };
@@ -31,7 +31,11 @@ const Workers = () => {
               <a href={"tel:" + elem.phone_number}>{elem?.phone_number}</a>
             </div>
             <div className="workers_img">
-              <img src={"http://" + elem?.image_url} alt="workers1" style={{width: "365px", height: "485px", left:"715px"}} />
+              <img
+                src={"http://" + elem?.image_url}
+                alt="workers1"
+                style={{ width: "365px", height: "485px", left: "715px" }}
+              />
             </div>
           </div>
         ))}

@@ -505,8 +505,10 @@ footer {
   .aboutwe_img img {
     width: 100%;
   }
-  .workers_text a {
+  .workers_text {
     text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
