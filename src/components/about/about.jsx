@@ -20,7 +20,7 @@ const About = () => {
           <div>
             <h1>{about?.title}</h1>
             <p>{about?.paragraph}</p>
-            <div>
+            <div className="bttn">
               <a href={"tel:" + about.phone_number}>{about?.phone_number}</a>
             </div>
           </div>

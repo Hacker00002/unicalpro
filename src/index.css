@@ -510,6 +510,14 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+  .container__hero a {
+    text-align: center;
+  }
+  .bttn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (max-width: 540px) {
