@@ -6,8 +6,8 @@ const Aboutwe = () => {
   const [aboutwe, setAboutwe] = useState([]);
   useEffect(() => {
     const fetchdata = async () => {
-      const datas = await fetch("https://artmedical.uz/v1/aboutus").then((elem) =>
-        elem.json()
+      const datas = await fetch("https://artmedical.uz/v1/aboutus").then(
+        (elem) => elem.json()
       );
       setAboutwe(datas);
     };
@@ -26,7 +26,16 @@ const Aboutwe = () => {
           </p>
         </div>
         <div className="aboutwe_img">
-          <img src={"https://" + aboutwe?.s_image_url} alt="hospital" style={{width: "540px", height: "520px", top: "969px", left: "640px"}}/>
+          <img
+            src={"https://" + aboutwe?.s_image_url}
+            alt="hospital"
+            style={{
+              width: "100%",
+              height: "520px",
+              top: "969px",
+              left: "640px",
+            }}
+          />
         </div>
       </div>
     </div>
