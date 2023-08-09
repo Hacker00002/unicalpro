@@ -29,7 +29,7 @@ const About = () => {
       </div>
       <div>
         <img
-          src={"http://" + about?.f_image_url}
+          src={"https://" + about?.f_image_url}
           style={{ width: "50vw", height: "100vh" }}
           alt="doctoes"
         />

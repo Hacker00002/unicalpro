@@ -24,7 +24,7 @@ const Adminlogin = () => {
       .then((response) => {
         console.log(response, "response");
         localStorage.setItem("Authorization", response?.data?.token);
-        window.location.href = "http://localhost:5173/dashboard-admin";
+        window.location.href = "https://artmedical.uz/dashboard-admin";
       })
       .catch((error) => setError(error?.message));
   };
